@@ -27,19 +27,19 @@ setInterval(function(){
 },15)
 
 function jump(){
-    //jumping=1
-    //let jumpCount=0
+    jumping=1
+    let jumpCount=0
     var jumpInterval=setInterval(function(){
         var birdTop=parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
         if(birdTop>2){
             bird.style.top=(birdTop-3)+'px'
         }
         
-        /*if(jumpCount>20){
+        if(jumpCount>20){
             clearInterval(jumpInterval)
             jumping=0
             jumpCount=0
         }
-        jumpCount++*/
+        jumpCount++
     },15)
 }
