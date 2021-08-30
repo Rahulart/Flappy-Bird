@@ -7,7 +7,7 @@ var count=0
 
 hole.addEventListener('animationiteration',()=>{
     var random=-(Math.floor(Math.random()*(700-350+1)+350))  //(max-min+1)+min
-    console.log(random);
+    //console.log(random);
     hole.style.top=random+'px'
     count++
 })
@@ -18,7 +18,6 @@ setInterval(function(){
     }
     var blockLeft=parseInt(window.getComputedStyle(block).getPropertyValue('left'))
     var holeTop=parseInt(window.getComputedStyle(hole).getPropertyValue('top'))
-    //var birdTop=parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
     var bdTop=-(700-birdTop)
      if((birdTop>670)||((blockLeft<63)&&(blockLeft>-60)&&((bdTop<holeTop)||(bdTop>holeTop+300)))){
          alert("Game over. score:"+(count-1))
